@@ -796,6 +796,22 @@
                                         </textFieldCell>
                                     </textField>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="C38AEEF9-9DDA-4014-9C60-A49F2630B39B" label="" paletteLabel="" image="NSRefreshTemplate" id="iqU-le-9PN">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="47" height="32"/>
+                                    <size key="maxSize" width="59" height="43"/>
+                                    <button key="view" verticalHuggingPriority="750" id="aAN-Yd-IGO">
+                                        <rect key="frame" x="0.0" y="14" width="59" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4Wb-tn-59m">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="reload:" target="Oky-zY-oP4" id="JiW-My-WWW"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="Kp8-ez-brf"/>
@@ -807,14 +823,17 @@
                                 <toolbarItem reference="oeX-VB-qGk"/>
                                 <toolbarItem reference="rvC-bf-l0c"/>
                                 <toolbarItem reference="ik3-mR-8N4"/>
+                                <toolbarItem reference="oeX-VB-qGk"/>
+                                <toolbarItem reference="iqU-le-9PN"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
-                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="DMu-US-jXl"/>
                         </connections>
                     </window>
                     <connections>
                         <outlet property="addressEntry" destination="75w-LJ-xI0" id="1gi-Pc-R2H"/>
+                        <outlet property="reloadButton" destination="aAN-Yd-IGO" id="R27-IR-vPr"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
@@ -840,6 +859,7 @@
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSGoLeftTemplate" width="9" height="12"/>
         <image name="NSGoRightTemplate" width="9" height="12"/>
+        <image name="NSRefreshTemplate" width="11" height="15"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
 </document>

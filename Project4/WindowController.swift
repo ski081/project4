@@ -10,10 +10,14 @@ import Cocoa
 
 class WindowController: NSWindowController {
     @IBOutlet var addressEntry: NSTextField!
+    @IBOutlet weak var reloadButton: NSButton!
     
     override func windowDidLoad() {
         super.windowDidLoad()
         window?.titleVisibility = .hidden
     }
 
+    override func cancelOperation(_ sender: Any?) {
+        window?.makeFirstResponder(self.contentViewController)
+    }
 }
